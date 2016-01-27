@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block nav-style %}mkt-nav{% endblock nav-style %}
+
+{% block content %}
+
+{# Hero Section #}
+<div class="mkt-s1">
+    <div class="mkt-s1-body container ">
+        <div class="row">
+            <h1 class="col-md-8">Forever loving Jah!</h1>
+        </div>
+        <div class="row">
+            <p class="col-md-8">Branko CRM</p>
+        </div>
+        <div class="row">
+            {# First Signup Link #}
+            <a href="" class="sign-up btn btn-success">Jamming Now!</a>
+        </div>
+    </div>
+</div>
+
+{# Main Section #}
+<div class="mkt-s2 container">
+    <h2 class="mkt-s2-h">Why Branko CRM?</h2>
+    <div class="mkt-s2-body">
+        <div class="col-md-4 mkt-vp">
+            <img class="" src="{{ STATIC_URL }}images/clock.png"/>
+            <h5>Save Time</h5>
+            <p>Time</p>
+        </div>
+        <div class="col-md-4 mkt-vp">
+            <img class="" src="{{ STATIC_URL }}images/lightbulb.png"/>
+            <h5>Stay Current</h5>
+            <p>Current</p>
+        </div>
+        <div class="col-md-4 mkt-vp">
+            <img class="" src="{{ STATIC_URL }}images/dollar.png"/>
+            <h5>Win Business</h5>
+            <p>Business</p>
+        </div>
+    </div>
+    {# Second Signup Link #}
+    <a href="" class=" sgn-btm ">Jamming Now!</a>
+</div>
+
+{% endblock content %}
