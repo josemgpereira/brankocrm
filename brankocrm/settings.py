@@ -14,6 +14,7 @@ from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+
 # Handling Key Import Errors
 def get_env_variable(var_name):
     """ Get the environment variable or return exception """
@@ -23,9 +24,9 @@ def get_env_variable(var_name):
         error_msg = "Set the %s environment variable" % var_name
         raise ImproperlyConfigured(error_msg)
 
+
 # Get ENV VARIABLES key
 ENV_ROLE = get_env_variable('ENV_ROLE')
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -43,7 +44,6 @@ if ENV_ROLE == 'development':
     BRANKOCRM_DB_PASS = get_env_variable('BRANKOCRM_DB_PASS')
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -69,7 +69,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'brankocrm.urls'
 
 WSGI_APPLICATION = 'brankocrm.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
@@ -98,8 +97,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
