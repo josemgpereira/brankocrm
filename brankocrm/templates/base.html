@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
     <title>{% block title %}Home {% endblock title %} | Branko CRM</title>
     {% block head_favicon %}
@@ -27,8 +28,9 @@
     {% endblock head_css %}
 </head>
 
+
 <body>
-{# Navigation Menu #}
+
 <header>
     <div class="navbar navbar-default navbar-static-top
         {% block nav-style %}{% endblock %}">
@@ -55,20 +57,20 @@
         </div>
     </div>
 </header>
-{# The Document Body #}
+
 <div id="site-wrapper">
     {% block content %}
     {% endblock content %}
 </div>
-{# The Footer #}
+
 <div class="footer">
     <div class="container">
-        <p>Copyright Branko CRM</p>
+        <p>Copyright Branko</p>
     </div>
 </div>
+
 </body>
 
-{# Set of blocks that can be used to display JavaScript files #}
 {% block footer_javascript %}
 {% block footer_javascript_site %}
 <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
@@ -78,4 +80,6 @@
 {% block footer_javascript_section %}{% endblock footer_javascript_section %}
 {% block footer_javascript_page %}{% endblock footer_javascript_page %}
 {% endblock footer_javascript %}
+
+
 </html>
