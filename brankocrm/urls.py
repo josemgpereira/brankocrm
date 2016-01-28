@@ -5,4 +5,5 @@ from marketing.views import HomePage
 urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^$', HomePage.as_view(), name="home"),
+                       url(r'^signup/$', 'brankocrm.subscribers.views.subscriber_new', name='sub_new'),
                        )
