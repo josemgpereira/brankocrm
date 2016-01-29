@@ -1,14 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}Signup{% endblock title %}
-
 {% block content %}
 <div id="content-container" class="container p-none">
     <div class="side-p">
         <form id="user-reg-form" action="." method="POST">
-
             {% csrf_token %}
             <h3>Signup</h3>
-
             <h5 class="sn-sh">CREATE A USERNAME AND PASSWORD</h5>
             <table class="table">
                 <tbody>
@@ -38,7 +35,6 @@
                 </tr>
                 </tbody>
             </table>
-
             <h5 class="sn-sh">YOUR BILLING ADDRESS</h5>
             <table class="table">
                 <tbody>
@@ -80,9 +76,7 @@
                 </tr>
                 </tbody>
             </table>
-
             <input class="btn btn-primary" type="submit" value="submit">
-
         </form>
     </div>
 </div>

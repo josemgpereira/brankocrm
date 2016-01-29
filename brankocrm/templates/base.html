@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <title>{% block title %}Home {% endblock title %} | Branko CRM</title>
     {% block head_favicon %}
-    <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/bkcrm.ico">
     {% endblock head_favicon %}
     {% block head_meta %}
     {% block head_meta_charset %}
@@ -28,9 +27,7 @@
     {% endblock head_css %}
 </head>
 
-
 <body>
-
 <header>
     <div class="navbar navbar-default navbar-static-top
         {% block nav-style %}{% endblock %}">
@@ -57,18 +54,15 @@
         </div>
     </div>
 </header>
-
 <div id="site-wrapper">
     {% block content %}
     {% endblock content %}
 </div>
-
 <div class="footer">
     <div class="container">
         <p>Copyright Branko</p>
     </div>
 </div>
-
 </body>
 
 {% block footer_javascript %}
@@ -80,6 +74,5 @@
 {% block footer_javascript_section %}{% endblock footer_javascript_section %}
 {% block footer_javascript_page %}{% endblock footer_javascript_page %}
 {% endblock footer_javascript %}
-
 
 </html>
