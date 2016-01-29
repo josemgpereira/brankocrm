@@ -24,7 +24,6 @@ class Migration(migrations.Migration):
                 ('user_rec', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'verbose_name_plural': 'subscribers',
             },
             bases=(models.Model,),
         ),
