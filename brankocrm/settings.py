@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'brankocrm.marketing',
     'brankocrm.subscribers',
+    'brankocrm.accounts',
 )
 
 MIDDLEWARE_CLASSES = (
