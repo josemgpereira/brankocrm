@@ -8,6 +8,7 @@ class AccountList(ListView):
     model = Account
     template_name = 'accounts/account_list.html'
     context_object_name = 'accounts'
+    paginate_by = 12
 
     def get_queryset(self):
         account_list = Account.objects.filter(owner=self.request.user)
