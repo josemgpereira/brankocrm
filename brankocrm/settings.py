@@ -57,6 +57,7 @@ INSTALLED_APPS = (
     'brankocrm.marketing',
     'brankocrm.subscribers',
     'brankocrm.accounts',
+    'brankocrm.contacts',
 )
 
 MIDDLEWARE_CLASSES = (
