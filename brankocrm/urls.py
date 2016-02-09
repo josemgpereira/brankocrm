@@ -10,6 +10,7 @@ urlpatterns = patterns('',
                        url(r'^signup/$', 'brankocrm.subscribers.views.subscriber_new', name='sub_new'),
                        url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
                        url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/login/'}),
+                       url(r'^account/new/$', 'brankocrm.accounts.views.account_cru', name='account_new'),
                        url(r'^account/list/$', AccountList.as_view(), name='account_list'),
                        url(r'^account/(?P<uuid>[\w-]+)/', include(account_urls)),
                        )
