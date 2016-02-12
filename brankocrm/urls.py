@@ -5,6 +5,9 @@ from accounts.views import AccountList
 from accounts.urls import account_urls
 from contacts.urls import contact_urls
 from contacts.views import ContactDelete
+from communications.urls import comm_urls
+from communications.views import CommDelete
+
 
 urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
@@ -18,7 +21,7 @@ urlpatterns = patterns('',
                        url(r'^contact/new/$', 'brankocrm.contacts.views.contact_cru', name='contact_new'),
                        url(r'^contact/(?P<uuid>[\w-]+)/', include(contact_urls)),
                        url(r'^contact/(?P<pk>[\w-]+)/delete/$',ContactDelete.as_view(), name='contact_delete'),
+                       url(r'^comm/new/$', 'brankocrm.communications.views.comm_cru', name='comm_new'),
+                       url(r'^comm/(?P<uuid>[\w-]+)/', include(comm_urls)),
+                       url(r'^comm/(?P<pk>[\w-]+)/delete/$', CommDelete.as_view(), name='comm_delete'),
                        )
-
-
-

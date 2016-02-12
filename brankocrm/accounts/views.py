@@ -9,6 +9,8 @@ from django.core.urlresolvers import reverse
 from .forms import AccountForm
 from django.shortcuts import get_object_or_404
 from brankocrm.contacts.models import Contact
+from brankocrm.communications.models import Communication
+from brankocrm.communications.forms import CommunicationForm
 
 
 class AccountList(ListView):
@@ -40,8 +42,10 @@ def account_detail(request, uuid):
         return HttpResponseForbidden()
 
     contacts = Contact.objects.filter(account=account)
+    communications = Communication.objects.filter(account=account).order_by('-created_on')
+    form = CommunicationForm()
 
-    variables = {'account': account, 'contacts': contacts,}
+    variables = {'account': account, 'contacts': contacts,'communications': communications, 'form': form,}
 
     return render(request, 'accounts/account_detail.html', variables)
 
